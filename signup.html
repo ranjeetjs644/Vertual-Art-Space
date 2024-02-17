@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-vertual art gallery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        :root {
+            --colorBlack: #222222;
+            --colorSilver: #f6f7f8;
+            --colorGrey: #030707;
+            --colorLighGrey: #f6f7f8;
+            --colorDarkGrey: #7a898e;
+            --colorBlue: #88a8a9;
+            --colorBlueAction: #0171e3;
+            --colorBeige: #f9f6f5;
+            --colorGreen: #4d9f53;
+            --colorOrange: #ff9143;
+            --colorRed: #e65426;
+            --colorArtDepot: #748a8f;
+            --colorArtOffice: #397b7c;
+            --colorArtSpaces: #28464b;
+            --colorArtSpaces20: #d4dadb;
+            --colorArtAugmented: #005e74;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            background-color: var(--colorArtDepot);
+        }
+
+        .form-container {
+            width: 90vw;
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+        }
+
+        .left {
+            width: 50%;
+            height: 100%;
+            padding: 3rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-family: 'poppins';
+            position: relative;
+            background-color: var(--colorArtSpaces);
+        }
+
+        .left h1 {
+            font-size: 1.5rem;
+        }
+
+        .left img {
+            width: 22rem;
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            padding: 2rem;
+            font-family: 'Lato';
+            background-color: var(--colorBeige);
+        }
+
+        .heading-part {
+            padding: .5rem 0;
+            margin-bottom: 1rem;
+            margin-top: 0rem;
+            text-align: start;
+            font-family: 'Roboto';
+        }
+
+        .heading-part h1 {
+            font-size: 1.7rem;
+            margin-bottom: .5rem;
+            font-family: 'Roboto';
+            color: #222222;
+        }
+
+        .inputs-box {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        < !-- .inputs-box label {
+            font-family: 'poppins';
+            letter-spacing: 1px;
+            font-size: .8rem;
+            margin: 1rem 0;
+            font-weight: 500;
+            color: var(--colorGrey);
+        }
+
+        -->.inputs-box input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 10px;
+            padding: 2px;
+            font-size: .9rem;
+            font-family: 'poppins';
+            background-color: transparent;
+            border-bottom: 2px solid #222222b0;
+            width: 80%;
+            margin: 1rem 0;
+            text-align: start;
+
+
+        }
+
+        input:focus {
+            outline: none;
+            background-color: transparent;
+        }
+
+        .signup-btn-box {
+            margin-top: 2rem;
+            text-align: start;
+        }
+
+        .signup-btn-box input {
+            margin-right: 1rem;
+        }
+
+        .signup-btn-box p {
+            font-size: 1rem;
+            width: 100%;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        #register-btn {
+            border: none;
+            background-color: #fa6400;
+            border-radius: .25rem;
+            box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 1.25;
+            margin: 0;
+            min-height: 2rem;
+            padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+            position: relative;
+            text-decoration: none;
+            transition: all 250ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            width: auto;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #register-btn:hover,
+        #register-btn:focus {
+            background-color: #fb8332;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        }
+
+        #register-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        #register-btn:active {
+            background-color: #c85000;
+            box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+            transform: translateY(0);
+        }
+
+
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+            .left {
+                display: none;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .signup-btn-box {
+                text-align: center;
+            }
+
+            .heading-part {
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            
+            .form-container{
+                height: 100%;
+                overflow-y: scroll;
+            }
+            .left {
+                display: none;
+            }
+
+            .right {
+                width: 100%;
+                padding: .8rem;
+            }
+
+            .heading-part {
+                text-align: center;
+                background-color: #005e74;
+                border-radius: 5px;
+            }
+
+            .heading-part h1 {
+                font-size: 1.3rem;
+            }
+
+            .heading-part p {
+                font-size: .7rem;
+            }
+
+            .inputs-box {
+                text-align: center;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .inputs-box input{
+                text-align: center;
+                font-size: .5rem;
+                width: fit;
+            }
+            .signup-btn-box {
+                text-align: center;
+                margin-top: 4px;
+            }
+            .signup-btn-box p{
+                font-size: .7rem;
+            }
+            #register-btn {
+                font-size: 10px;
+                min-height: 2rem;
+                padding: calc(.500rem - 1px) calc(1.5rem - 1px);
+                position: relative;
+                text-decoration: none;
+                transition: all 250ms;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                vertical-align: baseline;
+                width: auto;
+                margin-top: 1rem;
+                flex-wrap: wrap;
+            }
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <div class="left">
+            <img src="/assets/Color logo - no background.svg" alt="" width="250px">
+            <h1> Welcome to our Vertual Art Gallery!</h1>
+            <p>"Explore art's beauty in our digital space."</p>
+
+        </div>
+
+        <div class="right">
+            <div class="heading-part">
+                <h1>REGISTER NOW</h1>
+                <P>Already have an account? <a href="#"> Login here</a></P>
+            </div>
+
+            <div class="inputs-box">
+                <div class="form-inputs">
+                    <input type="email" name="" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-inputs">
+                    <input type="text" name="" id="username" placeholder="Username">
+                </div>
+                <div class="form-inputs">
+                    <input type="password" name="" id="password" placeholder="New Password">
+                </div>
+                <div class="form-inputs">
+                    <input type="password" name="" id="cnfm-pwd" placeholder="Confirm Password">
+                </div>
+                <div class="form-inputs">
+                    <input type="text" name="" id="public-name" placeholder="Public Name">
+                </div>
+                <div class="form-inputs">
+                    <input type="text" name="" id="Exhibitor-role" placeholder="Exhibitor Role">
+                </div>
+                <div class="form-inputs">
+                    <input type="text" name="" id="country" placeholder="Country">
+                </div>
+                <div class="form-inputs">
+                    <input type="text" name="city" id="city" placeholder="City">
+                </div>
+            </div>
+
+            <div class="signup-btn-box">
+                <p><input type="checkbox" name="agree" id="agree-check"> I accept the <a href="#"> terms and conditions
+                    </a> of artsphereonline.com</p>
+                <div><button id="register-btn">Create new account </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
