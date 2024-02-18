@@ -80,22 +80,24 @@
             width: 22rem;
         }
 
- 
+
 
         .right {
             width: 50%;
             height: 100%;
-            padding: 2rem;
+            padding: 2rem 2rem;
             font-family: 'Lato';
             background-color: var(--colorBeige);
+            text-align: start;
         }
 
         .heading-part {
             padding: .5rem 0;
-            margin-bottom: 1rem;
             margin-top: 0rem;
             text-align: start;
             font-family: 'Roboto';
+            
+
         }
 
         .heading-part h1 {
@@ -109,17 +111,21 @@
             margin-top: 2rem;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+        }
 
-        }
-        .form-inputs{
+        .form-inputs {
             display: flex;
-            align-items: baseline;
-            justify-content: center;
+            align-items: center;
+            margin-top: .8rem;
         }
-        .fa-solid{
-            margin-right: .7rem;
-            font-size: .8rem;
+
+        .fa-solid {
+            font-size: .9rem;
+            padding: 1rem;
+            padding-left: 0;
+            
         }
+
         .inputs-box label {
             font-family: 'poppins';
             letter-spacing: 1px;
@@ -164,7 +170,7 @@
             width: 100%;
             letter-spacing: 1px;
             font-weight: 600;
-            
+
         }
 
         #register-btn {
@@ -244,15 +250,17 @@
                 color: var(--colorBlack);
                 font-family: 'Poppins   ';
             }
-            .heading-part p{
+
+            .heading-part p {
                 font-family: 'Poppins';
             }
-            .fa-solid{
-                font-size: 1rem ;
+
+            .fa-solid {
+                font-size: 1rem;
             }
         }
 
-        @media screen and (max-width:767px){
+        @media screen and (max-width:767px) {
 
             .form-container {
                 width: 100%;
@@ -260,7 +268,7 @@
             }
 
             .inputs-box label {
-                display:none;
+                display: none;
                 font-size: .8rem;
             }
 
