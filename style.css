@@ -138,6 +138,11 @@ nav .mid ul li:hover .bar {
     color: black;
     border: 1.5px solid black;
     font-weight: bold;
+    font-size: .8rem;
+}
+
+.register button{
+    font-size: .8rem;
 }
 
 .login button:hover {
