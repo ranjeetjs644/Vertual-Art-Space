@@ -310,7 +310,7 @@ nav .mid ul li:hover .bar {
 
 
     .left img {
-        width: 8rem;
+        width: 10rem;
         margin-left: 1rem;
 
     }
@@ -321,12 +321,16 @@ nav .mid ul li:hover .bar {
 
     #fa-bars {
         display: block;
+        font-size: 1.3rem;
+        margin-right: 1rem;
     }
 
     .right .login button {
         border: none;
         margin: 0;
         font-size: .6rem;
+        padding: 0;
+        margin-left: .5rem;
         color: white;
     }
 
