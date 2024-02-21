@@ -44,7 +44,7 @@ body {
 
 nav {
     width: 100%;
-    height: 5rem;
+    height: 3.5rem;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -52,6 +52,19 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1; 
+}
+
+nav::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--colorBlack);
+    opacity: 0.4;
+    z-index: -1; 
 }
 
 .left {
@@ -88,11 +101,9 @@ nav .mid ul li a {
     text-transform: capitalize;
 }
 
-
 .bar {
-    background-color: var(--colorBlack);
+    background-color: var(--colorArtSpaces20);
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 3.5px;
@@ -103,7 +114,7 @@ nav .mid ul li a {
 
 
 nav .mid ul li:hover .bar {
-    width: 75%;
+    width: 70%;
 }
 
 .right {
@@ -119,7 +130,7 @@ nav .mid ul li:hover .bar {
     padding: .3rem .8rem;
     font-family: 'poppins';
     border: none;
-    background-color: var(--colorBlack);
+    background-color: var(--colorRed);
     color: white;
     letter-spacing: 1px;
     border-radius: 2px;
@@ -141,7 +152,7 @@ nav .mid ul li:hover .bar {
     font-size: .8rem;
 }
 
-.register button{
+.register button {
     font-size: .8rem;
 }
 
@@ -165,7 +176,7 @@ nav .mid ul li:hover .bar {
 
 .hero {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     position: relative;
     font-family: 'roboto';
     z-index: -1;
@@ -182,21 +193,22 @@ nav .mid ul li:hover .bar {
     left: 0;
     right: 0;
     bottom: 0;
+    /* background-image: url(https://www.ngv.vic.gov.au/wp-content/uploads/2020/04/jm.jpg); */
     background-image: url(https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .9;
-    filter: blur(1.8px);
-    animation: bg-change 100s infinite linear alternate-reverse;
+    opacity: .8;
+    filter: blur(1.5px);
 
 }
 
 
 .hero .hero-container {
     text-align: center;
-    width: 40%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,42 +218,27 @@ nav .mid ul li:hover .bar {
 }
 
 
-.hero .hero-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--colorArtSpaces20);
-    opacity: .4;
-    filter: blur(2px);
-    border-radius: 2px;
-
-}
-
-
-
 .home-heading {
     z-index: 1;
     font-weight: 600;
     margin: .8rem 0;
-    width: auto;
+    width: 100%;
 }
 
 .home-heading h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: var(--colorBlack);
     font-family: 'Roboto';
     font-weight: 800;
     letter-spacing: 1px;
     font-family: 'Roboto';
+    width: 100%;
 }
 
 .home-heading span {
     text-transform: uppercase;
     color: var(--colorArtSpaces);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 .home-heading span>span {
@@ -253,16 +250,42 @@ nav .mid ul li:hover .bar {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
 
 .home-para p {
-    color: var(--colorBlack);
-    font-size: 1rem;
+    color: #414141;
+    font-size: 1.8rem;
     font-weight: 600;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     z-index: 1;
-
 }
+
+
+
+
+.exhibition{
+    width: 100%;
+    height: 100%;
+    background-color:rebeccapurple;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0% 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media query for nav bar and home page */
 
@@ -296,23 +319,37 @@ nav .mid ul li:hover .bar {
         margin: 0;
     }
 
+    
+    .home-heading h1 {
+        font-size: 3rem;
+    }
+
+    .home-heading span {
+        font-size: 3rem;
+    }
+
+    .home-para p {
+        font-size: 1.5rem;
+    }
+
 }
 
 
 @media (max-width:424px) {
 
+
+    .hero{
+        background: fixed no-repeat center;
+    }
     nav {
         background-color: #222222b7;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         height: 3.5rem;
     }
 
-
-
     .left img {
         width: 10rem;
         margin-left: 1rem;
-
     }
 
     nav .mid ul {
@@ -346,4 +383,22 @@ nav .mid ul li:hover .bar {
         margin-right: 1rem;
         padding-left: .7rem;
     }
+
+    .home-heading h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-heading span {
+        font-size: 2.2rem;
+    }
+
+    .home-para p {
+        font-size: 1.3rem;
+    }
+
 }
+
+
+
+
+
