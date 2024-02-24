@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        :root {
+            --colorBlack: #222222;
+            --colorSilver: #f6f7f8;
+            --colorGrey: #030707;
+            --colorLighGrey: #f6f7f8;
+            --colorDarkGrey: #7a898e;
+            --colorBlue: #88a8a9;
+            --colorBlueAction: #0171e3;
+            --colorBeige: #f9f6f5;
+            --colorGreen: #4d9f53;
+            --colorOrange: #ff9143;
+            --colorRed: #e65426;
+            --colorArtDepot: #748a8f;
+            --colorArtOffice: #397b7c;
+            --colorArtSpaces: #28464b;
+            --colorArtSpaces20: #d4dadb;
+            --colorArtAugmented: #005e74;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            background-image: linear-gradient(to right bottom, #28464b, #3b565b, #4d676c, #60787d, #748a8f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left {
+            width: 50%;
+            height: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #60787d;
+            position: relative;
+            opacity: .9;
+            transition: all ease .34s;
+
+        }
+
+        .left img {
+            width: 20rem;
+            transition: all .4s ease;
+            transition: all ease .34s;
+
+        }
+
+        .left h1 {
+            font-size: 1.2rem;
+        }
+
+        .left div img {
+            width: 15rem;
+        }
+
+        .left>div {
+            text-align: center;
+            font-family: 'Poppins';
+            color: var(--colorBlack);
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            background-color: var(--colorArtSpaces20);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .right-top {
+            width: 100%;
+            height: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Poppins';
+        }
+
+        .right-top img {
+            width: 3.5rem;
+            margin-bottom: .5rem;
+        }
+
+        .right-top h1 {
+            color: #222222;
+        }
+
+        .right-top p {
+            font-size: .9rem;
+            color: #222222;
+        }
+
+        .right-mid {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-content: center;
+
+        }
+
+        .form-inputs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .form-inputs i {
+            font-size: .9rem;
+        }
+
+        input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 10px;
+            padding: 2px;
+            font-size: .8rem;
+            font-family: 'poppins';
+            background-color: transparent;
+            border-bottom: 2px solid #222222b0;
+            width: 70%;
+            margin: 1rem 0;
+            text-align: start;
+
+
+        }
+
+        input:focus {
+            outline: none;
+            background-color: transparent;
+        }
+
+        .right-bottom {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .right-bottom input {
+            margin-right: 1rem;
+        }
+
+        .right-bottom p {
+            width: 100%;
+            font-size: .9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            font-family: 'Lato';
+
+        }
+
+        .right-bottom input[type="checkbox"] {
+            width: 1rem;
+        }
+
+        #register-btn {
+            padding: .5rem 1.4rem;
+            border: none;
+            background-color: var(--colorRed);
+            color: var(--colorArtSpaces20);
+            font-family: 'Poppins';
+            border-radius: 5px;
+            transition: .3s all ease;
+
+        }
+
+        #register-btn:hover {
+            background-color: var(--colorBlack);
+
+        }
+
+
+        @media only screen and (min-width: 768px) and (max-width: 999px) {
+
+            .left {
+                display: none;
+            }
+
+            .left img {
+                width: 20rem
+            }
+
+            .left div>img {
+                width: 10rem;
+            }
+
+            .left h1 {
+                font-size: 1rem;
+            }
+
+            .left p {
+                font-size: .8rem;
+            }
+
+            .right {
+                width: 100%;
+                height: 100%;
+                padding: 0 3rem;
+            }
+
+            .right img {
+                width: 2.5rem;
+            }
+
+            .right-top h1 {
+                font-size: 1.2rem;
+            }
+
+            .right-mid input {
+                font-size: .9rem;
+            }
+
+            .right-bottom p {
+                font-size: .8rem;
+                display: flex;
+
+            }
+        }
+
+        @media screen and (max-width:767px) {
+
+            .left {
+                display: none;
+            }
+
+            form {
+                width: 100%;
+                height: 100%;
+            }
+
+            .right {
+                width: 100%;
+                height: 100vh;
+                justify-content: space-between;
+                overflow-y: scroll;
+                gap: .5rem;
+            }
+
+            .right-top h1 {
+                font-size: 1.2rem;
+            }
+
+            .right-top p {
+                font-size: .8rem;
+            }
+
+            .right-mid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .right-bottom {
+                width: 100%;
+            }
+
+            .right-bottom p{
+                display: inline ;
+                width: 100%;
+                text-align: center;
+                font-size: .9rem;
+            }
+
+            .right-bottom button{
+                margin: 1rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <section class="left">
+            <div>
+                <img src="/assets/white-transp.svg" alt="" class=".left-logo">
+                <h1> Welcome to our Vertual Art Gallery!</h1>
+                <p>"Explore art's beauty in our digital space."</p>
+            </div>
+            <img src="/assets/reg-bg.svg" alt="">
+        </section>
+
+        <section class="right">
+
+            <div class="right-top">
+                <img src="/assets/color-trans-log.png" alt="">
+                <h1>REGISTER NOW</h1>
+                <P>Already have an account? <a href="/login.html" target="_blank"> Login here</a></P>
+            </div>
+
+            <div class="right-mid">
+                <div class="form-inputs">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-inputs">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="" id="username" placeholder="Username">
+                </div>
+                <div class="form-inputs">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" id="password" placeholder="New Password">
+                </div>
+                <div class="form-inputs">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" id="cnfm-pwd" placeholder="Confirm Password">
+                </div>
+                <div class="form-inputs">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <input type="text" name="" id="country" placeholder="Country">
+                </div>
+                <div class="form-inputs">
+                    <i class="fa-solid fa-city"></i>
+                    <input type="text" name="city" id="city" placeholder="City">
+                </div>
+            </div>
+
+            <div class="right-bottom">
+                <p><input type="checkbox" name="agree" id="agree-check"> I accept the <a href="#"> terms and conditions
+                    </a> of artsphereonline.com</p>
+                <div><button id="register-btn">Create new account </button>
+                </div>
+
+        </section>
+    </form>
+</body>
+
+</html>
