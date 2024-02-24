@@ -71,10 +71,13 @@
 
         .left img:nth-child(2) {
             width: 24rem;
+            transition: all .4s ease;
+
         }
 
         .left img:nth-child(1) {
             width: 14rem;
+            transition: all .4s ease;
         }
 
         .right {
@@ -115,7 +118,7 @@
             align-items: center;
             justify-content: center;
             width: 50%;
-            
+
         }
 
         i {
@@ -170,7 +173,8 @@
             border-radius: 5px;
             cursor: pointer;
             background-color: var(--colorRed);
-            transition: all .3s ease-in-out;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            transition: all .3s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         }
 
         .btn button:hover {
@@ -187,18 +191,85 @@
             font-size: .8rem;
             color: #4d9f53;
         }
-        .bottom div:nth-child(3) a:nth-child(1) i{
+
+        .bottom div:nth-child(3) a:nth-child(1) i {
             color: rgb(202, 47, 73);
         }
-        .bottom div:nth-child(3) a:nth-child(2) i{
+
+        .bottom div:nth-child(3) a:nth-child(2) i {
             color: #e65426;
         }
-        .bottom div:nth-child(3) a:nth-child(3) i{
+
+        .bottom div:nth-child(3) a:nth-child(3) i {
             color: #0171e3;
         }
+
         a {
             text-decoration: none;
             color: var(--colorArtOffice);
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            
+            .left img:nth-child(1) {
+                width: 10rem;
+            }
+
+            .left img:nth-child(2) {
+                width: 18rem;
+            }
+             .right{
+                padding: 1rem;
+             }
+             
+             .mid{
+                width: 100%;
+             }
+             
+            .top img {
+                display: none;
+
+            }
+
+            .top h1 {
+                font-size: 1.8rem;
+            }
+
+            .input{
+                width: 80%;
+            }
+
+            .bottom div:nth-child(2){
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .left{
+                display: none;
+            }
+            form{
+                padding: 0;
+            }
+            .right{
+                width: 100vw;
+                height: 100vh;
+            }
+            .top {
+                flex-direction: column;
+
+            }
+            .top h1{
+                font-size: 1.2rem;
+            }
+            .bottom div:nth-child(2){
+                width: 100%;
+            }
+
+            .input{
+                width: 80%;
+            }
+            
         }
     </style>
 </head>
@@ -234,6 +305,7 @@
                     <p><a href="/Regsiteration_page.html">Not a member yet?</a></p>
                     <p><a href="">Forgot password? </a></p>
                 </div>
+
                 <div>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-google"></i></a>
