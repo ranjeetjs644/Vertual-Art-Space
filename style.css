@@ -48,7 +48,7 @@ nav {
 
     width: 100%;
     height: 2.5rem;
-background-color: #222222e0;
+    background-color: #222222e0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -57,6 +57,7 @@ background-color: #222222e0;
     left: 0;
     z-index: 1;
 }
+
 /* 
 nav::before {
     content: " ";
@@ -408,14 +409,6 @@ nav .mid ul li:hover .bar {
 }
 
 
-
-
-
-
-
-
-/* grid-galler */
-
 .gallery-heading {
     width: 100%;
     opacity: .6;
@@ -432,7 +425,7 @@ nav .mid ul li:hover .bar {
 
 }
 
-.grid-gallery {
+.modern-art {
     padding: 1rem;
     width: 55%;
     height: 100%;
@@ -463,7 +456,7 @@ nav .mid ul li:hover .bar {
 }
 
 
-.grid-gallery .grid-item img {
+.modern-art .grid-item img {
     width: 10rem;
     border-radius: 4px;
 }
@@ -488,8 +481,6 @@ nav .mid ul li:hover .bar {
     transform: scale(1.4);
     background-color: white;
 }
-
-
 
 
 .modernArt {
@@ -517,4 +508,43 @@ nav .mid ul li:hover .bar {
 
 .modernArt i:hover {
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modern gallery respnsiveness */
+
+
+@media (max-width:424px) {
+    .grid-gallery {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-gallery .grid-item img {
+        width: 6rem
+    }
+
+    .grid-item {
+        width: ;
+    }
 }
