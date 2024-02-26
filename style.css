@@ -425,7 +425,7 @@ nav .mid ul li:hover .bar {
 
 }
 
-.modern-art {
+.grid-gallery {
     padding: 1rem;
     width: 55%;
     height: 100%;
@@ -456,7 +456,7 @@ nav .mid ul li:hover .bar {
 }
 
 
-.modern-art .grid-item img {
+.grid-gallery .grid-item img {
     width: 10rem;
     border-radius: 4px;
 }
@@ -510,41 +510,32 @@ nav .mid ul li:hover .bar {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* modern gallery respnsiveness */
 
 
-@media (max-width:424px) {
+@media screen and (max-width:1024px)and (min-width:425px) {
     .grid-gallery {
+        width: 65%;
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
         overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .grid-gallery {
         width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(2, 1fr);
+        overflow-x: hidden;
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+        overflow-y: scroll;
     }
+}
 
-    .grid-gallery .grid-item img {
-        width: 6rem
-    }
+.grid-item {
 
-    .grid-item {
-        width: ;
-    }
+    margin: 0;
+    padding: 0;
+
+}
+
+
 }
