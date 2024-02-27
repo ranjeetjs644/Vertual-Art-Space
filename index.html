@@ -25,7 +25,7 @@
                     <li><a href="#home" class="nav-link">Home</a>
                         <div class="bar"></div>
                     </li>
-                    <li><a href="#exhi-page" class="nav-link">Exhibition</a>
+                    <li><a href="exhibition.html" target="_blank" class="nav-link">Exhibition</a>
                         <div class="bar"></div>
                     </li>
                     <li><a href="#" class="nav-link">Artists</a>
@@ -73,102 +73,6 @@
 
 
 
-    <!-- <section class="exhibition"> -->
-
-    <section class="exhibition-page" id="exhi-page">
-
-        <div class="gallery-heading">
-            <h1>Explore Different types of Arts</h1>
-        </div>
-
-
-        <div class="modernArt">
-            <h1>Modern art</h1>
-            <p> 1860 - 1975 </p>
-            <div class="social-links">
-                <a href=""><i class="fa fa-heart"></i></a>
-                <a href=""><i class="fa fa-link"></i></a>
-                <a href=" "><i class=" fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-x"></i></a>
-                <a href=""><i class="fa fa-share"></i></a>
-            </div>
-        </div>
-        <article class="grid-gallery" id="modern-art">
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img1.png" alt=""></a>
-                <p class="art-type">Self-Portrait</p>
-                <p class="painter">Vincent van Gogh1889</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img2.png" alt=""></a>
-                <p class="art-type">Woman with a Parasol - Madame Monet and Her Son</p>
-                <p class="painter">Claude Monet1875</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img3.png" alt=""></a>
-                <p class="art-type">Frieda and Diego Rivera</p>
-                <p class="painter">Frida Kahlo 1931</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img4.png" alt=""></a>
-                <p class="art-type">Portrait of Pablo Picasso</p>
-                <p class="painter">Juan GrisJanuary-February 1912</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img5.png" alt=""></a>
-                <p class="art-type">The Ballet Class</p>
-                <p class="painter">Edgar Degas1871 - 1874</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img6.png" alt=""></a>
-                <p class="art-type">Girl with Death Mask</p>
-                <p class="painter">Frida Kahlo 1938</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img7.png" alt=""></a>
-                <p class="art-type">Portrait of Madame Matisse. The Green Line</p>
-                <p class="painter">Henri Matisse 1905</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img8.png" alt=""></a>
-                <p class="art-type">Blue Horse I</p>
-                <p class="painter">Franz Marc 1911</p>
-            </figure>
-            <figure class="grid-item">
-                <a href=""><img src="/assets/art-images/img9.png" alt=""></a>
-                <p class="art-type">Berthe Morisot With a Bouquet of Violets</p>
-                <p class="painter">Édouard Manet1872</p>
-            </figure>
-
-        </article>
-
-
-
-
-    </section>
-
+    
 </body>
-<script>
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      var homeSection = document.getElementById("home");
-      var navbar = document.getElementById("navbar");
-      
-      var scrollPosition = window.scrollY;
-      var homeSectionHeight = homeSection.offsetHeight;
-      var homeSectionTop = homeSection.offsetTop;
-      var navbarHeight = navbar.offsetHeight; // Adjusts for navbar height
-      
-      if (scrollPosition > (homeSectionTop + homeSectionHeight - navbarHeight)) {
-        navbar.style.backgroundColor = "#222222e0"; // Change background color when scrolling past home section
-      } else {
-        navbar.style.backgroundColor = "transparent"; // Reset background color when not scrolling past home section
-      }
-    }
-    
-
-    
-</script>
-
 </html>
