@@ -187,8 +187,8 @@ nav .mid ul li:hover .bar {
     right: 0;
     bottom: 0;
     background-image: url(https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-image: linear-gradient(to left top, #5c6778, #667b84, #7a8e8e, #93a099, #aeb1a9);
-    background-image: linear-gradient(to right top, #a1999d, #9c959b, #969198, #908d96, #898994, #8a90a0, #8798ac, #81a0b6, #79b6cf, #6dcde2, #60e4ed, #5ffbf1);
+    /* background-image: linear-gradient(to left top, #5c6778, #667b84, #7a8e8e, #93a099, #aeb1a9);
+    background-image: linear-gradient(to right top, #a1999d, #9c959b, #969198, #908d96, #898994, #8a90a0, #8798ac, #81a0b6, #79b6cf, #6dcde2, #60e4ed, #5ffbf1); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
